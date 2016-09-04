@@ -1,0 +1,31 @@
+<div *ngIf="message" class="alert alert-success">
+    <strong>{{message}}</strong>
+</div>
+<form role = "form" class="add-task-form">
+
+    <div class = "form-group">
+        <label for = "title">Title</label>
+        <input type = "text" [(ngModel)]="task.name" class = "form-control" name="title" id = "title" placeholder = "Enter Title" />
+    </div>
+
+    <div class = "form-group">
+        <label for = "description">Description</label>
+        <textarea [(ngModel)]="task.description" class = "form-control" name="description" id = "description"> </textarea>
+    </div>
+
+    <div class = "form-group">
+        <label for = "begintime">Begin time</label>
+        <input [(ngModel)]="task.start_time" type = "text" class = "form-control" name="begintime" id = "begintime" />
+    </div>
+
+    <div class = "form-group">
+        <label for = "endtime">End time</label>
+        <input [(ngModel)]="task.end_time" type = "text" class = "form-control" name="endtime" id = "endtime" />
+    </div>
+
+    <div class = "checkbox">
+        <label><input type = "checkbox" name="disabletime" />Disable time for this task</label>
+    </div>
+
+    <button (click)="save()" type = "submit" class = "btn btn-default">Submit</button>
+</form>

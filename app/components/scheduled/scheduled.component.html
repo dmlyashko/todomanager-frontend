@@ -1,0 +1,22 @@
+<h1>Scheduled tasks</h1>
+
+<div class="calendar">
+    <div class="section" *ngFor="let section of sections">
+    <h2 style="text-align: center">{{section.section_title}}</h2>
+    <hr />
+    <div class="day" *ngFor="let day of section.days">
+        <h3>{{day.date}}</h3>
+        <table class="table">
+            <tbody>
+            <tr *ngFor="let task of day.tasks">
+                <td><input type="checkbox"/></td>
+                <td>{{task.name}}</td>
+                <td>{{task.start_time}}</td>
+                <td>{{task.end_time}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+

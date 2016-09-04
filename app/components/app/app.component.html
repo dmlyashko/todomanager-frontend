@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="navbar-header">
+                    <h1 class="logo"><a href="#">TODO Manager</a></h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div style="float:right;"><a class="btn btn-primary" routerLink="/add-task">Add task</a></div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container main">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked navigation-bar">
+                <li class="active"><a routerLink="/today">Today</a></li>
+                <li><a routerLink="/tomorrow">Tomorrow</a></li>
+                <li><a routerLink="/scheduled">Scheduled tasks</a></li>
+                <li><a routerLink="/someday">Someday</a></li>
+                <li><a routerLink="/categories">Categories</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

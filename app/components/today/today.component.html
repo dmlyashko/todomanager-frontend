@@ -1,0 +1,20 @@
+<table class="table">
+    <caption><span class="strong">Today</span></caption>
+
+    <thead>
+        <tr>
+            <th>Mark as complete</th>
+            <th>Name</th>
+            <th>Start time</th>
+            <th>End time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <td><input type="checkbox"/></td>
+            <td><a routerLink="/edit-task/{{task.id}}">{{task.name}}</a></td>
+            <td>{{task.start_time}}</td>
+            <td>{{task.end_time}}</td>
+        </tr>
+    </tbody>
+</table>
